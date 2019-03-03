@@ -2,10 +2,9 @@ var connection = require("../config/connection.js");
 
 var orm = {
 
-selectAll: function(){
+selectAll: function(cb){
 
-
-console.log("orm.js")
+connection.query("SELECT * FROM burger",function(err,res){console.log(res),cb(res)})
 
 },
 

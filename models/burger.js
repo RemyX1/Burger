@@ -3,7 +3,14 @@ var orm = require("../config/orm.js");
 
 var burger = {
 
-render: function(){console.log(orm.selectAll())}
+render: function(cb){
+
+    orm.selectAll(function(res){
+console.log(res)
+cb(res)
+
+
+})} 
 
 
 
